@@ -43,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   List<User> users = [];
   Future getUserData() async {
-
     var response = await http.get(Uri.http('https://www.googleapis.com/youtube/v3/search?port=spinnet&q=the weeknd&key=AIzaSyAmkVByQT4H4KKStNeaLd9obDkvMv_Qk6U','users'));
     var jsonData = jsonDecode(response.body);
     for(var u in jsonData){
